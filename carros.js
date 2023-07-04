@@ -9,7 +9,7 @@ function Veiculo(modelo, ano, tipoMotor) {
     if (tipoMotor == "combustão") {
       _acelerar = "vruumm";
     } else {
-      _acelerar = ".....";
+      _acelerar = "sshhhh";
     }
   };
 
@@ -32,9 +32,15 @@ function MotorEletrico(modelo, ano, tipoMotor) {
 
 let carro1 = new MotorCombustao("Marea", 1990, "combustão");
 let carro2 = new MotorEletrico("Tesla", 2022, "eletrico");
-
 let carro3 = new MotorCombustao("Voyage", 2020, "combustão");
 
-console.log(carro1);
-console.log(carro2);
-console.log(carro3);
+function infos(car) {
+  console.log(`Modelo: ${car.modelo}`);
+  console.log(`Ano: ${car.ano}`);
+  console.log(`Tipo de motor: ${car.tipoMotor}`);
+  console.log(`Dirigindo meu carro: ${car.acelerar}`);
+}
+
+infos(carro1);
+infos(carro2);
+infos(carro3);
